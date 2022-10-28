@@ -4,11 +4,13 @@ dist
 dist-ssr
 *.local
 
-vite.config.js*
-tsconfig.*
-TODO.draw
-.replit
-replit.nix
+/vite.config.js
+/vite.config.js.timestamp-*.mjs
+/tsconfig.json
+/tsconfig.node.json
+/TODO.draw
+/.replit
+/replit.nix
 .upm
-package-lock.json
-package.json
+/package-lock.json
+/package.json

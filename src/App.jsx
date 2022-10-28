@@ -1,7 +1,18 @@
 import './App.css'
 import { useEffect, useState } from "react"
-import { Box, Badge, Menu, MenuItem, Avatar, AppBar, Toolbar, IconButton, Typography, Button } from "@mui/material"
-import { Menu as MenuIcon } from '@mui/icons-material';
+import { Outlet } from "react-router-dom"
+import {
+    Box,
+    Badge,
+    Menu,
+    MenuItem,
+    Avatar,
+    AppBar,
+    Toolbar,
+    IconButton,
+    Typography,
+    Button
+} from "@mui/material"
 
 export default function App() {
 
@@ -26,9 +37,9 @@ export default function App() {
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: 0.5, my:1 }}
+                        sx={{ mr: 0.5, my: 1 }}
                     >
-                        <Avatar sx={{ width: 48, height: 48 }} src="/favicon.png"/>
+                        <Avatar sx={{ width: 48, height: 48 }} src="/favicon.png" />
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Memsicle
@@ -40,7 +51,7 @@ export default function App() {
                             :
                             <IconButton onClick={(e) => {
                                 setMenuAnchor(e.target)
-                            }}><Avatar alt={user.name} src={user.profileImage}/></IconButton>
+                            }}><Avatar alt={user.name} src={user.profileImage} /></IconButton>
                     }
 
                     <Menu
@@ -48,13 +59,13 @@ export default function App() {
                         open={!!menuAnchor}
                         onClose={() => {
                             setMenuAnchor(null)
-
                         }}
                     >
                         <MenuItem>Logout</MenuItem>
                     </Menu>
                 </Toolbar>
             </AppBar>
+            <Outlet/>
         </Box>
     )
 }
