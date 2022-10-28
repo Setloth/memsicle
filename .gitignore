@@ -3,3 +3,12 @@ node_modules
 dist
 dist-ssr
 *.local
+
+vite.config.js*
+tsconfig.*
+TODO.draw
+.replit
+replit.nix
+.upm
+package-lock.json
+package.json
